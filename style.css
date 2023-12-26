@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'LOTTERIACHAB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'seolleimcool-SemiBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/seolleimcool-SemiBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin: 0;
+    background-image: url(christmas-1068222_1920dd.jpg);
+    background-size: 568px
+}
+
+/* header 공간 */
+header {
+    width: 100%;
+    height: 15vh;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    /* z축(깊이)를 기준으로 화면 앞으로 나오게 하거나 뒤로 가게 한다. */
+    z-index: 100;
+    background-color: #7d0408;
+}
+
+header h1 {
+    font-family: 'LOTTERIACHAB';
+    font-size: 8vh;
+    font-weight: 100;
+    color: white;
+}
+
+/* 전체 section에 대한 디자인 */
+section {
+    height: 45vh;
+    /* border를 이용해서 가이드 작성 - 디자인 후 지우기 */
+}
+
+/* section 1. 배경 사진과 글자 위치 */
+.s1 {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: center; */
+}
+
+/* 글자를 조금 띄우고, 글자 색상 변경 */
+.word {
+    position: relative;
+    font-size: 2vh;
+    color: white;
+    font-family: 'seolleimcool-SemiBold';
+    text-align: center;
+}
+
+a{
+    font-size: 1.5em;
+    text-decoration: none;
+}
+/* section 2. 그림 추가 */
+.gallery {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+}
+
+.box {
+    width: 400px;
+    height: 40vh; /* vh는 비율에 따라 바뀌는 값 */
+    background-color: gray;
+    /* 마진값을 하나만 넣으면 위, 아래, 양 옆에 적용
+    마진값을 두 개 넣으면 위 아래, 양 옆으로 각각 적용 */
+    margin: 5px; 
+    border-radius: 30px;
+    padding-bottom: 30px;
+}
+
+.pic1 {
+    background-image: url(cookies-5847940_1280.jpg);
+    /* 이미지의 크기를 맞춘다 */
+    background-size: cover;
+    /* 이미지의 위치를 이동한다 */
+    /* 이미지의 위치는 left, center, right로 이동 가능 */
+    background-position: center;
+    transition: all 0.5s;
+    /* div의 글자 정렬을 flex로 할 수 있다 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+}
+.pic1:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.21);
+    /* 그림자의 방향과 반대로 그림이 약간 올라가는 효과 */
+    transform: translate(-5px, -10px);
+    font-size: 25px;
+    font-family: 'LOTTERIACHAB';
+    color: white;
+    font-weight: 100;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.237);
+}
+
+
+.pic2 {
+    background-image: url(drink-6865996_1280.jpg);
+    /* 이미지의 크기를 맞춘다 */
+    background-size: cover;
+    /* 이미지의 위치를 이동한다 */
+    background-position: center;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+}
+.pic2:hover {
+    transform: translatey(-10px);
+    opacity: 0.5;
+    font-size: 25px;
+    font-family: 'LOTTERIACHAB';
+    color: black;
+    font-weight: 100;
+    text-shadow: 5px 5px 5px whitesmoke;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.21);
+}
+
+.pic-box {
+    overflow: hidden;
+    width: 400px;
+    height: 40vh; /* vh는 비율에 따라 바뀌는 값 */
+    background-color: gray;
+    /* 마진값을 하나만 넣으면 위, 아래, 양 옆에 적용
+    마진값을 두 개 넣으면 위 아래, 양 옆으로 각각 적용 */
+    margin: 5px; 
+    border-radius: 30px;
+}
+
+.pic3 {
+    /* inherit 부모와 같은 크기를 갖는다 */
+    width: inherit;
+    height: inherit;
+    background-image: url(christmas-1042162_1280.jpg);
+    /* 이미지의 크기를 맞춘다 */
+    background-size: cover;
+    /* 이미지의 위치를 이동한다 */
+    background-position: center;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pic3:hover {
+    transform: scale(1.1);
+    filter: blur(5px);
+    color: white;
+
+}
+.word2 {
+    /* 글자를 이동하기위해, 작성 */
+    position: absolute;
+    top: 50%;
+    color: black;
+    /* inherit 는 부모의 값을 고정해서 들고오지만, 100%는 바뀌는 부모의 값을 가져온다. */
+    width: 100%;
+    text-align: center;
+}
+
+/* footer에 대한 디자인 */
+footer {
+    height: 8vh;
+    color: whitesmoke;
+    text-align: center;
+    align-items: end;
+}
+
+/* 모바일 크기일 때 보여줄 디자인 */
+@media (max-width:767px) {
+    .gallery {
+        flex-direction: column;
+    }
+    .s2 {
+        /* auto 자식의 높이만큼 가짐 */
+        height: auto;
+    }   
+    .box {
+        width: 90vw;
+        height: 300px;
+    }    
+}
